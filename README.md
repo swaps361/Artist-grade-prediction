@@ -64,6 +64,3 @@ helps in generating accurate results.
 
 ### Contact
 For any questions or feedback, feel free to reach out to [swapnildas742@gmail.com](mailto:swapnildas742@gmail.com)
-
-### Contact
-For any questions or feedback, feel free to reach out to [swapnildas742@gmail.com](mailto:swapnildas742@gmail.com)
