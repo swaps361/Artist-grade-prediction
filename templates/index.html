@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Prediction</title>
+    <style>
+        body {
+          background-image: url('https://i.ibb.co/9qgMk6b/paint.png');
+          background-size: cover;
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+          height: 100vh;
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+
+        h1 {
+          text-align: center;
+          color: #333;
+          margin-top: 20px; /* Adjusted */
+        }
+
+        form {
+          width: 50%;
+          max-width: 600px;
+          margin: auto;
+          padding: 20px;
+          border: 2px solid #00000098;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        label {
+          font-weight: bold;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 15px 20px;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+
+        .prediction {
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Score Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Enter Age</label><br>
+        <input type="text" id="age" name="age" value=""><br>
+
+        <label for="sex">Enter Sex (Female: 1, Male: 0)</label><br>
+        <input type="text" id="sex" name="sex" value=""><br>
+
+        <label for="address">Enter Address (Urban: 1, Rural: 0)</label><br>
+        <input type="text" id="address" name="address" value=""><br>
+
+        <label for="Astatus">Enter Assignment Status (Yes: 1, No: 0)</label><br>
+        <input type="text" id="Astatus" name="Astatus" value=""><br>
+
+        <label for="studytime">Enter Weekly Study Time (hours)</label><br>
+        <input type="text" id="studytime" name="studytime" value=""><br>
+
+        <label for="failures">Enter Number of Past Failures</label><br>
+        <input type="text" id="failures" name="failures" value=""><br>
+
+        <label for="status">Enter Status (Intermediate: 1, Beginner: 0)</label><br>
+        <input type="text" id="status" name="status" value=""><br>
+
+        <label for="mode">Enter Mode (Acrylic: 1, Watercolor: 0)</label><br>
+        <input type="text" id="mode" name="mode" value=""><br>
+
+        <label for="paid">Fees Paid (Yes: 1, No: 0)</label><br>
+        <input type="text" id="paid" name="paid" value=""><br>
+
+        <label for="activities">Activities (Yes: 1, No: 0)</label><br>
+        <input type="text" id="activities" name="activities" value=""><br>
+
+        <label for="absences">Enter Number of Absences</label><br>
+        <input type="text" id="absences" name="absences" value=""><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction_text %}
+        <div class="prediction">Prediction Result: {{ prediction_text }}</div>
+    {% endif %}
+</body>
+</html>
