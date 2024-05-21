@@ -1,4 +1,4 @@
-# Artist grade prediction
+# Artist grade prediction using Machine Learning with Python
 ### Description
 The project predicts the score of the artists using linear regression which
 helps in generating accurate results.
